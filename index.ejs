@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if(locals.request) {%>
+        <title>
+            <%= request %>
+        </title>
+        <% }else{ %>
+            <title>Document</title>
+            <% } %>
+</head>
+
+<body>
+    <div>
+
+        <form action="/adminlog" method="get"><button type="submit">Admin login</button></form>
+        <form action="/userlog" method="get"><button type="submit">User login</button></form>
+        <form action="/reg" method="get"><button type="submit">register</button></form>
+        <div id="sw"></div>
+        <button id="swB" type="button" onclick="start()">start</button>
+        <button id="swB" type="button" onclick="start()">start</button>
+        <!-- <button type="submit">register</button> -->
+    </div>
+    <script>
+
+        let interval;
+
+        var fn;
+        function start() {
+            // var element = document.querySelector("#swB");
+            console.log("hi2");
+            var h = 0, m = 0, s = 0, ms = 0, i = 0;
+
+            sw = document.getElementById("sw");
+
+            fn = setInterval(() => {
+                ms++;
+                s=Math.floor(ms/10);
+                m=Math.floor(s/60);
+                h=Math.floor(m/60);
+
+                sw.innerHTML = h%60 + ":" + m%60 + ":" + s%60 + ":" + ms%10;
+
+            }, 100);
+
+
+
+        }
+
+        function stop(){
+            // var h = 0, m = 0, s = 0, ms = 0, i = 0;
+            clearInterval(ms);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

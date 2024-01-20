@@ -1,0 +1,78 @@
+.fullscreen-form {
+    width: 95%;
+    /* aspect-ratio: 2; */
+}
+
+@media only screen and (min-width: 300px) {
+    .fullscreen-form {
+        width: 80vw;
+
+    }
+    .sidebar{
+        width: 100vw;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .fullscreen-form {
+        width: 50vw;
+    }
+    .sidebar{
+        width:30vw;
+    }
+
+
+}
+
+.fullscreen-form-content {
+    width: 100%;
+    max-width: 600px;
+}
+
+input[type="image"] {
+    color: blue;
+}
+
+.sidebar {
+    display: none;
+    transition: transform 2s;
+}
+
+@keyframes sidebaranimPhone {
+    100% {
+        transform: translate(-100vw, 0);
+        
+    }
+}
+@keyframes sidebaranim {
+    100% {
+        transform: translate(-37.5vw, 0);
+        
+    }
+}
+
+@keyframes sidebardis {
+    100%{
+        display: none;
+    }
+}
+
+
+
+@keyframes detailsformanim {
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes removesidebaranim {
+    100% {
+        /* transform: translateX(37.5vw); */
+        display: none;
+
+    }
+
+}

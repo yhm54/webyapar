@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="log-reg" method="post" action="/log">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <img name="photo" id="output" width="200px" height = "200px">
+        <input type="c-password" name="c-password">
+        <input type="file" accept="image/*" name="file" onchange="loadFile(event)" id="file" class="myclass" />
+        <label for="file">Choose a file</label>
+        <button type="submit">register</button>
+    </form>
+    <form action="/log" method="get"> <button type="submit">login</button></form>
+
+    <script>
+        var loadFile = function (event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        
+        };
+    </script>
+
+
+</body>
+
+</html>
